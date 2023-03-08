@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TrackIt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lets_get_started">Let\'s Get Started</string>
+    <string name="staying_healthy_is_as_important_as_being_good_at_work">Staying healthy is as important as being good at work.</string>
+    <string name="get_started">Get Started</string>
+</resources>
