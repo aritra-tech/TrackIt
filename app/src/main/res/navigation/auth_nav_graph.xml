@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/gettingStartedFragment">
+
+    <fragment
+        android:id="@+id/gettingStartedFragment"
+        android:name="com.geekymusketeers.trackit.GettingStartedFragment"
+        android:label="fragment_getting_started"
+        tools:layout="@layout/fragment_getting_started" >
+        <action
+            android:id="@+id/action_gettingStartedFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_gettingStartedFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.geekymusketeers.trackit.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.geekymusketeers.trackit.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+</navigation>
