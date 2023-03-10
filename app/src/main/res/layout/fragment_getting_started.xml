@@ -48,6 +48,7 @@
             android:fontFamily="@font/dm_sans_medium"
             android:includeFontPadding="false"
             android:text="TrackIt"
+            android:textColor="@color/black"
             android:textSize="33sp"/>
 
 
@@ -58,7 +59,7 @@
             android:includeFontPadding="false"
             android:text="Your all-in-one health tracker to monitor and improve your fitness goals"
             android:textColor="@color/grey"
-            android:textSize="14sp"
+            android:textSize="15sp"
             android:fontFamily="@font/dm_sans"/>
 
 
