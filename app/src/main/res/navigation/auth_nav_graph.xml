@@ -13,18 +13,10 @@
         <action
             android:id="@+id/action_gettingStartedFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
-        <action
-            android:id="@+id/action_gettingStartedFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.geekymusketeers.trackit.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" />
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.geekymusketeers.trackit.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
 </navigation>

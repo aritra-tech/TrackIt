@@ -63,45 +63,22 @@
             android:fontFamily="@font/dm_sans"/>
 
 
-        <LinearLayout
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signInBtn"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/getting_strated_button_layout">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/signInBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Sign in"
-                android:textSize="15sp"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:background="@drawable/rounded_button" />
+            android:layout_height="57dp"
+            android:layout_weight="1"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/dm_sans_medium"
+            android:gravity="center"
+            android:text="Get Started"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/signUpBtn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:background="@android:color/transparent"
-                android:paddingHorizontal="16dp"
-                android:text="Sign up"
-                android:textSize="15sp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textAllCaps="false"/>
-
-
-        </LinearLayout>
 
 
     </LinearLayout>

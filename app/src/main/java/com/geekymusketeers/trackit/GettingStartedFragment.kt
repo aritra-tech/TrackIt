@@ -20,14 +20,7 @@ class GettingStartedFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentGettingStartedBinding.inflate(inflater, container, false)
         goToSignIn()
-        goToSignUp()
         return binding.root
-    }
-
-    private fun goToSignUp() {
-        binding.signUpBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_gettingStartedFragment_to_registerFragment)
-        }
     }
 
     private fun goToSignIn() {
