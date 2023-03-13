@@ -14,4 +14,13 @@
         <item name="android:statusBarColor">@color/light_blue</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.TrackIt.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.TrackIt.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.TrackIt.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
