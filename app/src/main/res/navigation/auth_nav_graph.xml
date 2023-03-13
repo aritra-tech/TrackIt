@@ -7,16 +7,7 @@
 
     <fragment
         android:id="@+id/gettingStartedFragment"
-        android:name="com.geekymusketeers.trackit.GettingStartedFragment"
+        android:name="com.geekymusketeers.trackit.auth.GettingStartedFragment"
         android:label="fragment_getting_started"
-        tools:layout="@layout/fragment_getting_started" >
-        <action
-            android:id="@+id/action_gettingStartedFragment_to_signInFragment"
-            app:destination="@id/signInFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/signInFragment"
-        android:name="com.geekymusketeers.trackit.SignInFragment"
-        android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_getting_started" />
 </navigation>
