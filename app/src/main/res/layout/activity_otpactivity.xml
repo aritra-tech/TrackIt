@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".auth.OTPActivity">
 
     <TextView
@@ -71,6 +72,7 @@
         android:gravity="center"
         android:inputType="number"
         tools:hint="0"
+        android:textColor="@color/black"
         android:maxLength="1"
         android:fontFamily="@font/dm_sans"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -85,6 +87,7 @@
         android:ems="10"
         android:gravity="center"
         tools:hint="0"
+        android:textColor="@color/black"
         android:fontFamily="@font/dm_sans"
         android:inputType="number"
         android:maxLength="1"
@@ -103,6 +106,7 @@
         android:inputType="number"
         android:gravity="center"
         tools:hint="0"
+        android:textColor="@color/black"
         android:fontFamily="@font/dm_sans"
         android:maxLength="1"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -120,6 +124,7 @@
         android:inputType="number"
         android:gravity="center"
         tools:hint="0"
+        android:textColor="@color/black"
         android:fontFamily="@font/dm_sans"
         android:maxLength="1"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -138,6 +143,7 @@
         android:inputType="number"
         android:gravity="center"
         tools:hint="0"
+        android:textColor="@color/black"
         android:fontFamily="@font/dm_sans"
         android:maxLength="1"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -158,6 +164,7 @@
         android:inputType="number"
         android:gravity="center"
         tools:hint="0"
+        android:textColor="@color/black"
         android:fontFamily="@font/dm_sans"
         android:maxLength="1"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -181,7 +188,7 @@
         app:layout_constraintGuide_percent="0.44" />
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/resentOTPText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -214,7 +221,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="320dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button"
         android:fontFamily="@font/dm_sans_medium"
@@ -223,8 +230,8 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/resentOTPText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
