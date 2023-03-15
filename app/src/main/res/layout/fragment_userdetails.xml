@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".auth.fragments.UserDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_bg"
+        android:orientation="vertical"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans_medium"
+            android:text="Please tell me more about yourself"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            tools:hint="Age"
+            android:fontFamily="@font/dm_sans"
+            android:paddingStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:inputType="number"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="30dp"/>
+
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            tools:hint="Height"
+            android:fontFamily="@font/dm_sans"
+            android:paddingStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:inputType="number"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            tools:hint="Weight"
+            android:fontFamily="@font/dm_sans"
+            android:paddingStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:inputType="number"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/getOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/button"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:fontFamily="@font/dm_sans_medium"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
