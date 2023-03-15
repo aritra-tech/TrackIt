@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/dm_sans"
-        android:text="Please enter the 4 digit code sent to your number"
+        android:text="Please enter the 6 digit code sent to your number"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
