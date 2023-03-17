@@ -43,11 +43,13 @@ class NameFragment : Fragment() {
                     firstNameHelperTV.text = "Please Enter the First Name."
                     firstNameHelperTV.visibility = View.VISIBLE
                 }
+                return@setOnClickListener
             }else if (lastName.isEmpty()){
                 binding.apply {
                     lastNameHelperTV.text = "Please Enter the Last Name."
                     lastNameHelperTV.visibility = View.VISIBLE
                 }
+                return@setOnClickListener
             }
             // Passing the value taken from Name Fragment to UserDetails Fragment
             val action = NameFragmentDirections.actionNameFragmentToUserDetailsFragment(firstName, lastName, args.gender)

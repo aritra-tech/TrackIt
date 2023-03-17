@@ -54,9 +54,28 @@ class UserDetailsFragment : Fragment() {
             val height = binding.age.text.toString()
             val weight = binding.age.text.toString()
             if (age.isEmpty() and height.isEmpty() and weight.isEmpty()) {
-                Toast.makeText(requireContext(), "Please Enter your Details", Toast.LENGTH_SHORT).show()
+                binding.apply {
+                    allDetailsHelperTV.text = "Please Enter the Details."
+                    allDetailsHelperTV.visibility = View.VISIBLE
+                }
                 return@setOnClickListener
+            }else if (age.isEmpty()){
+                binding.apply {
+                    ageHelperTV.text = "Please Enter the Age."
+                    ageHelperTV.visibility = View.VISIBLE
+                }
+            }else if (height.isEmpty()){
+                binding.apply {
+                    heightHelperTV.text = "Please Enter the Height."
+                    heightHelperTV.visibility = View.VISIBLE
+                }
+            }else if (weight.isEmpty()){
+                binding.apply {
+                    weightHelperTV.text = "Please Enter the Weight."
+                    weightHelperTV.visibility = View.VISIBLE
+                }
             }
+            // Saving the data to Firebase Realtime DB
             val user = User (
                 FirebaseAuth.getInstance().currentUser!!.uid,
                 args.gender,
@@ -65,7 +84,6 @@ class UserDetailsFragment : Fragment() {
                 height,
                 weight
             )
-
             userViewModel.saveUser(user)
         }
 

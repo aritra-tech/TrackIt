@@ -41,6 +41,17 @@
             android:background="@drawable/edittext"
             android:layout_marginTop="30dp"/>
 
+        <TextView
+            android:id="@+id/ageHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Age." />
+
         <EditText
             android:id="@+id/height"
             android:layout_width="match_parent"
@@ -55,6 +66,17 @@
             android:background="@drawable/edittext"
             android:layout_marginTop="20dp"/>
 
+        <TextView
+            android:id="@+id/heightHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Height." />
+
         <EditText
             android:id="@+id/weight"
             android:layout_width="match_parent"
@@ -68,6 +90,28 @@
             android:textColorHint="@color/grey"
             android:background="@drawable/edittext"
             android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/weightHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Weight." />
+
+        <TextView
+            android:id="@+id/allDetailsHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Weight." />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/save_details"
