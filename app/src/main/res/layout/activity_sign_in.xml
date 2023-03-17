@@ -53,7 +53,7 @@
             android:id="@+id/phone_number"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            tools:hint="7980845394"
+            android:hint="7980845394"
             android:fontFamily="@font/dm_sans"
             android:paddingStart="16dp"
             android:textColor="@color/black"

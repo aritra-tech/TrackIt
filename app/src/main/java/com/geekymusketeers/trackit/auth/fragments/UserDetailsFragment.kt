@@ -38,7 +38,9 @@ class UserDetailsFragment : Fragment() {
         userViewModel.run {
             saveUserStatusLiveData.observe(viewLifecycleOwner) {
                 if (it) {
-                    startActivity(Intent(requireActivity(), MainActivity::class.java))
+                    startActivity(Intent(requireActivity(), MainActivity::class.java)).also {
+                        requireActivity().finish()
+                    }
                 }
             }
             errorLiveData.observe(viewLifecycleOwner) {
