@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/dm_sans_medium"
-            android:text="Hey, What's your name"
+            android:text="Hey, What's your name ?"
             android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="25sp"/>
@@ -31,7 +31,7 @@
             android:id="@+id/first_name"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            tools:hint="First Name"
+            android:hint="First Name"
             android:fontFamily="@font/dm_sans"
             android:paddingStart="16dp"
             android:textColor="@color/black"
@@ -41,31 +41,64 @@
             android:background="@drawable/edittext"
             android:layout_marginTop="30dp"/>
 
-        <EditText
-            android:id="@+id/second_name"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            tools:hint="Last Name"
-            android:fontFamily="@font/dm_sans"
-            android:paddingStart="16dp"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:inputType="text"
-            android:textColorHint="@color/grey"
-            android:background="@drawable/edittext"
-            android:layout_marginTop="30dp"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/getOTP"
+        <TextView
+            android:id="@+id/firstNameHelperTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the First Name." />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Last Name"
+            android:fontFamily="@font/dm_sans"
+            android:paddingStart="16dp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:inputType="text"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/edittext"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/lastNameHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Last Name." />
+
+        <TextView
+            android:id="@+id/allDetailsHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Details." />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continue_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:background="@drawable/button"
             android:text="Continue"
             android:textAllCaps="false"
             android:fontFamily="@font/dm_sans_medium"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
 
 

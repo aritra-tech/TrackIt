@@ -22,10 +22,23 @@
         <action
             android:id="@+id/action_nameFragment_to_userDetailsFragment"
             app:destination="@id/userDetailsFragment" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/userDetailsFragment"
         android:name="com.geekymusketeers.trackit.auth.fragments.UserDetailsFragment"
         android:label="fragment_userdetails"
-        tools:layout="@layout/fragment_userdetails" />
+        tools:layout="@layout/fragment_userdetails" >
+        <argument
+            android:name="firstname"
+            app:argType="string" />
+        <argument
+            android:name="lastname"
+            app:argType="string" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+    </fragment>
 </navigation>

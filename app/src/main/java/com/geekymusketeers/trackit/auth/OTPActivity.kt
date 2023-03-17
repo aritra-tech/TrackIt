@@ -178,12 +178,12 @@ class OTPActivity : AppCompatActivity() {
 
     @SuppressLint("CutPasteId")
     private fun initialization() {
-        inputOTP1 = findViewById(R.id.otpEditText1)
-        inputOTP2 = findViewById(R.id.otpEditText2)
-        inputOTP3 = findViewById(R.id.otpEditText3)
-        inputOTP4 = findViewById(R.id.otpEditText4)
-        inputOTP5 = findViewById(R.id.otpEditText5)
-        inputOTP6 = findViewById(R.id.otpEditText6)
+        inputOTP1 = binding.otpEditText1
+        inputOTP2 = binding.otpEditText2
+        inputOTP3 = binding.otpEditText3
+        inputOTP4 = binding.otpEditText4
+        inputOTP5 = binding.otpEditText5
+        inputOTP6 = binding.otpEditText6
     }
 
     private fun verifyOTP() {
@@ -223,6 +223,6 @@ class OTPActivity : AppCompatActivity() {
     }
 
     private fun sendToMain() {
-        startActivity(Intent(this,MainActivity::class.java))
+        startActivity(Intent(this,RegisterActivity::class.java))
     }
 }

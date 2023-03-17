@@ -31,7 +31,7 @@
             android:id="@+id/age"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            tools:hint="Age"
+            android:hint="Age"
             android:fontFamily="@font/dm_sans"
             android:paddingStart="16dp"
             android:textColor="@color/black"
@@ -45,7 +45,7 @@
             android:id="@+id/height"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            tools:hint="Height"
+            android:hint="Height"
             android:fontFamily="@font/dm_sans"
             android:paddingStart="16dp"
             android:textColor="@color/black"
@@ -59,7 +59,7 @@
             android:id="@+id/weight"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            tools:hint="Weight"
+            android:hint="Weight"
             android:fontFamily="@font/dm_sans"
             android:paddingStart="16dp"
             android:textColor="@color/black"
@@ -70,16 +70,16 @@
             android:layout_marginTop="20dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/getOTP"
+            android:id="@+id/save_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
             android:background="@drawable/button"
-            android:text="Continue"
+            android:text="Save"
             android:textAllCaps="false"
             android:fontFamily="@font/dm_sans_medium"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
 
 
 
