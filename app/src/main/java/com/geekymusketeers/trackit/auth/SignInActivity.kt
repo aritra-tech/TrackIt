@@ -31,9 +31,17 @@ class SignInActivity : AppCompatActivity() {
     private fun handleOperation() {
         binding.getOTP.setOnClickListener {
            number = binding.phoneNumber.text.toString()
-            if (number.isNotEmpty()){
+            if (number.isEmpty()){
+                binding.apply {
+                    phoneNumberHelperTV.text = "Please Enter the Phone Number."
+                    phoneNumberHelperTV.visibility = View.VISIBLE
+                }
+                return@setOnClickListener
+            }
+            else if (number.isNotEmpty()){
                 if (number.length == 10){
                     number = "+91$number"
+                    binding.progressBar.visibility = View.VISIBLE
                     val options = PhoneAuthOptions.newBuilder(auth)
                         .setPhoneNumber(number)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
@@ -47,19 +55,12 @@ class SignInActivity : AppCompatActivity() {
                 }
             }else{
                 Toast.makeText(this , "Please Enter Number" , Toast.LENGTH_SHORT).show()
-
             }
         }
     }
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-            // This callback will be invoked in two situations:
-            // 1 - Instant verification. In some cases the phone number can be instantly
-            //     verified without needing to send or enter a verification code.
-            // 2 - Auto-retrieval. On some devices Google Play services can automatically
-            //     detect the incoming verification SMS and perform verification without
-            //     user action.
             signInWithPhoneAuthCredential(credential)
         }
 
@@ -74,6 +75,7 @@ class SignInActivity : AppCompatActivity() {
                 // The SMS quota for the project has been exceeded
                 Log.d("TAG", "onVerificationFailed: $e")
             }
+            binding.progressBar.visibility = View.VISIBLE
             // Show a message and update the UI
         }
 
@@ -81,15 +83,12 @@ class SignInActivity : AppCompatActivity() {
             verificationId: String,
             token: PhoneAuthProvider.ForceResendingToken
         ) {
-            // The SMS verification code has been sent to the provided phone number, we
-            // now need to ask the user to enter the code and then construct a credential
-            // by combining the code with a verification ID.
-            // Save verification ID and resending token so we can use them later
             val intent = Intent(this@SignInActivity , OTPActivity::class.java)
             intent.putExtra("OTP" , verificationId)
             intent.putExtra("resendToken" , token)
             intent.putExtra("phoneNumber" , number)
             startActivity(intent)
+            binding.progressBar.visibility = View.GONE
         }
     }
 
@@ -107,6 +106,7 @@ class SignInActivity : AppCompatActivity() {
                     }
                     // Update UI
                 }
+                binding.progressBar.visibility = View.VISIBLE
             }
     }
 }

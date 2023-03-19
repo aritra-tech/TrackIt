@@ -147,18 +147,18 @@ class OTPActivity : AppCompatActivity() {
     private val callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
         override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-
             signInWithPhoneAuthCredential(credential)
         }
 
         override fun onVerificationFailed(e: FirebaseException) {
             if (e is FirebaseAuthInvalidCredentialsException) {
                 // Invalid request
-                Log.d("TAG", "onVerificationFailed: ${e.toString()}")
+                Log.d("TAG", "onVerificationFailed: $e")
             } else if (e is FirebaseTooManyRequestsException) {
                 // The SMS quota for the project has been exceeded
-                Log.d("TAG", "onVerificationFailed: ${e.toString()}")
+                Log.d("TAG", "onVerificationFailed: $e")
             }
+            binding.progressBarOTP.visibility = View.VISIBLE
         }
 
         override fun onCodeSent(
@@ -196,6 +196,7 @@ class OTPActivity : AppCompatActivity() {
                     val credential: PhoneAuthCredential = PhoneAuthProvider.getCredential(
                         OTP, typedOTP
                     )
+                    binding.progressBarOTP.visibility = View.VISIBLE
                     signInWithPhoneAuthCredential(credential)
                 } else {
                     Toast.makeText(this, "Please Enter Correct OTP", Toast.LENGTH_SHORT).show()
@@ -219,6 +220,7 @@ class OTPActivity : AppCompatActivity() {
                         // The verification code entered was invalid
                     }
                 }
+                binding.progressBarOTP.visibility = View.VISIBLE
             }
     }
 

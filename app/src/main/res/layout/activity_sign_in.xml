@@ -22,6 +22,7 @@
         app:lottie_rawRes="@raw/login" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_bg"
@@ -37,7 +38,7 @@
             android:fontFamily="@font/dm_sans_bold"
             android:text="Let's Get Started"
             android:textColor="@color/black"
-            android:textSize="28sp"/>
+            android:textSize="28sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,36 +48,60 @@
             android:text="Enter your Mobile Number"
             android:textAlignment="center"
             android:textColor="@color/grey"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
+
 
         <EditText
             android:id="@+id/phone_number"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:hint="7980845394"
-            android:fontFamily="@font/dm_sans"
-            android:paddingStart="16dp"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:inputType="phone"
-            android:textColorHint="@color/grey"
+            android:layout_marginTop="30dp"
             android:background="@drawable/edittext"
-            android:layout_marginTop="30dp"/>
+            android:inputType="phone"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="17sp"
+            tools:hint="1234567890" />
+
+        <TextView
+            android:id="@+id/phoneNumberHelperTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:visibility="gone"
+            tools:text="Please Enter the Phone Number." />
 
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/getOTP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="70dp"
             android:background="@drawable/button"
-            android:text="GET OTP"
             android:fontFamily="@font/dm_sans_medium"
+            android:text="GET OTP"
             android:textColor="@color/white"
             android:textSize="16sp" />
 
 
-
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#1A1A1A"
+        android:progressTint="#1A1A1A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
