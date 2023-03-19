@@ -12,8 +12,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.geekymusketeers.trackit.MainActivity
-import com.geekymusketeers.trackit.R
 import com.geekymusketeers.trackit.databinding.ActivityOtpactivityBinding
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException

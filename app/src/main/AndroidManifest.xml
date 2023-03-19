@@ -17,6 +17,9 @@
         android:theme="@style/Theme.TrackIt"
         tools:targetApi="31" >
         <activity
+            android:name=".ui.SplashActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.RegisterActivity"
             android:exported="false" />
         <activity
@@ -35,7 +38,7 @@
             android:name=".auth.SignInActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true" />
 
         <meta-data
