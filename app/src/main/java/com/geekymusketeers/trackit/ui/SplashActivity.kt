@@ -7,10 +7,12 @@ import android.os.Handler
 import android.os.Looper
 import com.geekymusketeers.trackit.R
 import com.geekymusketeers.trackit.databinding.ActivitySplashBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashBinding
+    private lateinit var auth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +21,7 @@ class SplashActivity : AppCompatActivity() {
 
         //Hides action bar
         supportActionBar?.hide()
+        auth = FirebaseAuth.getInstance()
         goToGreetingStartedFragmentScreen()
     }
 

@@ -18,21 +18,23 @@ class FirebaseViewModel : ViewModel() {
     private val viewModelScope = CoroutineScope(Dispatchers.IO)
     val errorLiveData = MutableLiveData<String>()
     private val firebaseRepository: FirebaseRepository = FirebaseRepository()
-    private val databaseReference: DatabaseReference = FirebaseDatabase.getInstance(Constants.baseURL).reference
+    private val databaseReference: DatabaseReference =
+        FirebaseDatabase.getInstance(Constants.baseURL).reference
     val saveUserStatusLiveData = MutableLiveData<Boolean>()
 
 
     fun saveUser(user: User) {
         viewModelScope.launch {
             try {
-                databaseReference.child(Constants.userPath).child(user.userID).setValue(user).addOnSuccessListener {
-                    saveUserStatusLiveData.postValue(true)
-                }.addOnFailureListener {
-                    errorLiveData.postValue(it.message.toString())
-                }
+                databaseReference.child(Constants.userPath).child(user.userID).setValue(user)
+                    .addOnSuccessListener {
+                        saveUserStatusLiveData.postValue(true)
+                    }.addOnFailureListener {
+                        errorLiveData.postValue(it.message.toString())
+                    }
             } catch (e: Exception) {
                 errorLiveData.postValue(e.message.toString())
             }
-            }
         }
     }
+}

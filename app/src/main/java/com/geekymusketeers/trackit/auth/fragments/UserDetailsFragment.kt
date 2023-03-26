@@ -54,7 +54,7 @@ class UserDetailsFragment : Fragment() {
             val age = binding.age.text.toString()
             val height = binding.age.text.toString()
             val weight = binding.age.text.toString()
-            if (age.isEmpty() and height.isEmpty() and weight.isEmpty()) {
+            if (age.isEmpty() && height.isEmpty() && weight.isEmpty()) {
                 binding.apply {
                     allDetailsHelperTV.text = "Please Enter the Details."
                     allDetailsHelperTV.visibility = View.VISIBLE
